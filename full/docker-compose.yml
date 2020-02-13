@@ -17,6 +17,7 @@ services:
       - ${PORT}:80
     depends_on:
       - postgres
+      - migrate
 
   postgres:
     image: 'postgres:10.6'
