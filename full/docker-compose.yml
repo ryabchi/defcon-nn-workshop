@@ -8,7 +8,6 @@ services:
     environment:
       DATABASE_URL: &db_default ${DATABASE_URL}
       SECRET_KEY: ${SECRET_KEY}
-      ADMIN_URL: ${ADMIN_URL}
       DEBUG: ${DEBUG}
     command: gunicorn yourwall.wsgi:application --config='/gunicorn.py' --reload
     volumes:
